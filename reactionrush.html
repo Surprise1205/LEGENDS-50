@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reaction Rankings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="rankings">
+
+<header>
+    <h1>🏆 REACTION RUSH RANKINGS</h1>
+</header>
+
+<main>
+    <section>
+        <ol id="ranking"></ol>
+    </section>
+
+    <p><a href="reactionrush.html">Back to Reaction Rush</a></p>
+    <p><a href="home.html">Back to Games</a></p>
+</main>
+
+<script>
+let scores = JSON.parse(localStorage.getItem("reactionScores") || "[]");
+
+scores.sort(function(a, b) {
+    return b.score - a.score;
+});
+
+let ranking = document.getElementById("ranking");
+
+for (let i = 0; i < scores.length; i++) {
+    let player = document.createElement("li");
+
+    player.innerHTML = scores[i].username + " - " +
+        scores[i].score + " / 30";
+
+    ranking.appendChild(player);
+}
+
+if (scores.length == 0) {
+    ranking.innerHTML = "<li>No scores yet.</li>";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LEGENDS'50 - Math Rankings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="rankings">
+
+<header>
+    <h1>🏆 MATH RUSH RANKINGS</h1>
+    <p>Top Players</p>
+</header>
+
+<main>
+
+<section>
+
+<h2>Leaderboard</h2>
+
+<ol id="ranking"></ol>
+
+</section>
+
+<p>
+    <a href="maths.html">← Back to Math Rush</a>
+</p>
+
+<p>
+    <a href="home.html">← Back to Games</a>
+</p>
+
+</main>
+
+<footer>
+    <p>LEGENDS'50 &copy; 2026</p>
+</footer>
+
+<script>
+
+let ranking = document.getElementById("ranking");
+
+let scores = JSON.parse(localStorage.getItem("mathScores") || "[]");
+
+scores.sort(function(a, b) {
+    return b.score - a.score;
+});
+
+if (scores.length == 0) {
+
+    ranking.innerHTML = "<li>No players have scores yet.</li>";
+
+} else {
+
+    for (let i = 0; i < scores.length; i++) {
+
+        let player = document.createElement("li");
+
+        player.innerHTML =
+            scores[i].username + " - " + scores[i].score + " / 20";
+
+        ranking.appendChild(player);
+    }
+}
+
+</script>
+
+</body>
+
+</html>

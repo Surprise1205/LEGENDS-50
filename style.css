@@ -1,0 +1,201 @@
+/* GENERAL */
+
+body {
+    background: #080b18;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+}
+
+header, footer {
+    background: #11162b;
+    padding: 20px;
+}
+
+header {
+    border-bottom: 2px solid #8b5cf6;
+    box-shadow: 0 0 15px #8b5cf6;
+}
+
+h1 {
+    color: #a855f7;
+    text-shadow: 0 0 10px #a855f7;
+}
+
+h2 {
+    color: #c084fc;
+}
+
+main {
+    padding: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    border-radius: 15px;
+}
+
+
+/* HOME */
+
+section {
+    background: #11162b;
+    border: 1px solid #30385c;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+section:hover {
+    border-color: #a855f7;
+    box-shadow: 0 0 20px #8b5cf6;
+}
+
+
+/* SIGN UP */
+
+form {
+    background: #11162b;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input {
+    background: #080b18;
+    color: white;
+    border: 1px solid #475569;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+input[type="submit"] {
+    background: #8b5cf6;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* MATH RUSH */
+
+#problem {
+    font-size: 35px;
+}
+
+#time {
+    color: #facc15;
+}
+
+#score {
+    color: #22c55e;
+}
+
+
+/* MEMORY RUSH */
+
+#sequence {
+    font-size: 40px;
+    color: #22d3ee;
+}
+
+
+/* REACTION RUSH */
+
+#target {
+    width: 200px;
+}
+
+#reactionTime {
+    color: #fb923c;
+}
+
+#reactionScore {
+    color: #22c55e;
+}
+
+.reaction #target {
+    width: 300px;
+    height: 220px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    border: 3px solid #f97316;
+    border-radius: 20px;
+    background: #11162b;
+}
+
+/* RANKINGS */
+
+li {
+    padding: 8px;
+}
+
+
+/* ================= MEMORY RUSH ================= */
+
+.memory {
+    background: #061a24;
+}
+
+.memory h1 {
+    color: #22d3ee;
+    text-shadow: 0 0 10px #22d3ee;
+}
+
+.memory section {
+    border: 2px solid #06b6d4;
+    box-shadow: 0 0 20px #164e63;
+}
+
+.memory #sequence {
+    font-size: 45px;
+    color: #22d3ee;
+    letter-spacing: 10px;
+}
+
+.memory input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.memory #memoryMessage {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* MEMORY BOARD */
+
+.memory #gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.memorySlot {
+    height: 90px;
+    border: 2px dashed #22d3ee;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.memoryObject {
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    background: #082f49;
+    border: 0;
+    cursor: grab;
+}
